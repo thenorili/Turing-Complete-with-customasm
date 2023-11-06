@@ -13,27 +13,27 @@
 #subruledef math
 {
 	; arithmetic
-	add   => 0x0;`8
-	sub   => 0x1;`8
-	and   => 0x2;`8
-	or    => 0x3;`8
-	not   => 0x4;`8
-	xor   => 0x5;`8
-	shl   => 0x6;`8
-	shr   => 0x7;`8
-	mul   => 0x8;`8
-	mulhi => 0x9;`8
+	add   => 0x0
+	sub   => 0x1
+	and   => 0x2
+	or    => 0x3
+	not   => 0x4
+	xor   => 0x5
+	shl   => 0x6
+	shr   => 0x7
+	mul   => 0x8
+	mulhi => 0x9
 }
 
 #const(noemit) cond = 32
 #subruledef cond
 {
-	je    => (cond + 0x0);`8
-	jne   => (cond + 0x1);`8
-	jlt   => (cond + 0x2);`8
-	jle   => (cond + 0x3);`8
-	jgt   => (cond + 0x4);`8
-	jge   => (cond + 0x5);`8
+	je    => (cond + 0x0)
+	jne   => (cond + 0x1)
+	jlt   => (cond + 0x2)
+	jle   => (cond + 0x3)
+	jgt   => (cond + 0x4)
+	jge   => (cond + 0x5)
 }
 
 #subruledef numbered_register
