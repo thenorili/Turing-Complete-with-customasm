@@ -1,0 +1,60 @@
+module CONDzmLEG (clk, rst, Input_1, Input_2, Opcode, Output);
+  parameter UUID = 0;
+  parameter NAME = "";
+  input wire clk;
+  input wire rst;
+
+  input  wire [7:0] Input_1;
+  input  wire [7:0] Input_2;
+  input  wire [7:0] Opcode;
+  output  wire [0:0] Output;
+
+  TC_Switch # (.UUID(64'd3497580439981816914 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_0 (.en(wire_9[0:0]), .in(1'd0), .out(wire_4_7));
+  TC_Switch # (.UUID(64'd1448824014796769036 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_1 (.en(wire_12[0:0]), .in(1'd0), .out(wire_4_5));
+  TC_Switch # (.UUID(64'd4554510900720496976 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_2 (.en(wire_3[0:0]), .in(wire_5), .out(wire_4_3));
+  TC_Switch # (.UUID(64'd91216586525759670 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_3 (.en(wire_10[0:0]), .in(wire_15), .out(wire_4_0));
+  TC_Switch # (.UUID(64'd1372708889074616658 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_4 (.en(wire_14[0:0]), .in(wire_17), .out(wire_4_1));
+  TC_Switch # (.UUID(64'd1300125593546505776 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_5 (.en(wire_13[0:0]), .in(wire_2), .out(wire_4_2));
+  TC_Switch # (.UUID(64'd4077061998002136631 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_6 (.en(wire_6[0:0]), .in(wire_16), .out(wire_4_4));
+  TC_Switch # (.UUID(64'd1351893154727297284 ^ UUID), .BIT_WIDTH(64'd1)) Switch1_7 (.en(wire_8[0:0]), .in(wire_0), .out(wire_4_6));
+  TC_Equal # (.UUID(64'd834123411326788523 ^ UUID), .BIT_WIDTH(64'd8)) Equal8_8 (.in0(wire_1), .in1(wire_7), .out(wire_0));
+  TC_Not # (.UUID(64'd902581532308852392 ^ UUID), .BIT_WIDTH(64'd1)) Not_9 (.in(wire_0), .out(wire_16));
+  TC_LessU # (.UUID(64'd3359974293796131432 ^ UUID), .BIT_WIDTH(64'd8)) LessU8_10 (.in0(wire_1), .in1(wire_7), .out(wire_2));
+  TC_Not # (.UUID(64'd1106453149704737785 ^ UUID), .BIT_WIDTH(64'd1)) Not_11 (.in(wire_17), .out(wire_15));
+  TC_Not # (.UUID(64'd2218595055140581669 ^ UUID), .BIT_WIDTH(64'd1)) Not_12 (.in(wire_2), .out(wire_5));
+  OR # (.UUID(64'd1328891456938257687 ^ UUID)) OR_13 (.clk(clk), .rst(rst), .Input_1(wire_0), .Input_2(wire_2), .Output(wire_17));
+  DMUX # (.UUID(64'd4428444860366692038 ^ UUID)) DMUX_14 (.clk(clk), .rst(rst), .Input(wire_11), .Disable(1'd0), .\4 (wire_10), .\5 (wire_3), .\6 (wire_12), .\7 (wire_9), .\3 (wire_14), .\0 (wire_8), .\1 (wire_6), .\2 (wire_13));
+
+  wire [0:0] wire_0;
+  wire [7:0] wire_1;
+  assign wire_1 = Input_1;
+  wire [0:0] wire_2;
+  wire [7:0] wire_3;
+  wire [0:0] wire_4;
+  wire [0:0] wire_4_0;
+  wire [0:0] wire_4_1;
+  wire [0:0] wire_4_2;
+  wire [0:0] wire_4_3;
+  wire [0:0] wire_4_4;
+  wire [0:0] wire_4_5;
+  wire [0:0] wire_4_6;
+  wire [0:0] wire_4_7;
+  assign wire_4 = wire_4_0|wire_4_1|wire_4_2|wire_4_3|wire_4_4|wire_4_5|wire_4_6|wire_4_7;
+  assign Output = wire_4;
+  wire [0:0] wire_5;
+  wire [7:0] wire_6;
+  wire [7:0] wire_7;
+  assign wire_7 = Input_2;
+  wire [7:0] wire_8;
+  wire [7:0] wire_9;
+  wire [7:0] wire_10;
+  wire [7:0] wire_11;
+  assign wire_11 = Opcode;
+  wire [7:0] wire_12;
+  wire [7:0] wire_13;
+  wire [7:0] wire_14;
+  wire [0:0] wire_15;
+  wire [0:0] wire_16;
+  wire [0:0] wire_17;
+
+endmodule
